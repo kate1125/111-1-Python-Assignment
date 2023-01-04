@@ -38,7 +38,7 @@ class Student:  #定義類別Student
     def store_score(self):  #定義方法store_score
         self.score = list(self.score)  #原本的tuple形式轉存成list
         for i in self.score:  #使用for迴圈將list的資料依序排出
-            self.string =self.string+'\t'
+            self.string =self.string+ '\t'
             for j in i:
                 self.string+=str(j)
             self.string+="\n"
@@ -60,9 +60,9 @@ class Student:  #定義類別Student
                f"學號：{self.student_id}\n" + \
                f"姓名：{self.name}\n" + \
                f"{self.store_score()}" + \
-               f"                   最低分：{self.find_lowest_grade()}\n" + \
-               f"                   最高分：{self.find_highest_grade()}\n" + \
-               f"                   平均成績：{self.average}\n"
+               f"\t最低分：{self.find_lowest_grade()}\n" + \
+               f"\t最高分：{self.find_highest_grade()}\n" + \
+               f"\t平均成績：{self.average}\n"
 
 st1 = Student('資管系', '大二', 'S10490100', '王捷', [66, 15, 33, 28, 89, 92])  #學生1的資料
 st2 = Student('企管系', '大三', 'S09410100', '吳剛', [78, 25, 63, 58, 73, 46])  #學生2的資料
